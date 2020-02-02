@@ -384,6 +384,9 @@ class _SwiperState extends _SwiperTimerMixin {
   TransformerPageController _pageController;
 
   Widget _wrapTap(BuildContext context, int index) {
+    return widget.itemBuilder(context, index);
+    
+    /*
     return new GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: () {
@@ -391,6 +394,7 @@ class _SwiperState extends _SwiperTimerMixin {
       },
       child: widget.itemBuilder(context, index),
     );
+    */
   }
 
   @override
